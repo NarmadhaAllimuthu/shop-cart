@@ -1,26 +1,26 @@
-
-
 .feature-details {
   display: flex;
-  /* justify-content: space-between; */
+ 
   align-items: center;
 }
 
 .feature-details h6,
 .feature-details span {
-  display: inline;  /* or display: inline; */
-  margin: 0;             /* Remove default margins to ensure elements are close */
+  display: inline;
+ 
+  margin: 0;
 }
 
 .card {
-  height: 100%;  /* Set a fixed height for the card */
+  height: 100%;
+ 
 }
 
-li{
- list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-h5{
+h5 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   letter-spacing: 1px;
   word-spacing: 2px;

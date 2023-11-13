@@ -1,4 +1,4 @@
-
+//importing the needed component files
 import './App.css';
 import Shop from './Shopping';
 import Nav from './Nav';
@@ -12,7 +12,7 @@ import { useState } from 'react';
 
 function App() {
 
-
+//storing in a variable for the usage in our website 
     const details = [{
         id: 1,
         img: "https://dummyimage.com/450x300/dee2e6/6c757d.jpg",
@@ -148,18 +148,15 @@ function App() {
         }
     ];
 
+    // use usestate of hooks for changing the states or updating while clicking  
     const [cart, setCart] = useState([]);
-
+ 
+    //function stored in a variable  so that we can see a need code and work on function by using the variable name where we want
     const handletoCart = (details) => {
         setCart([...cart, details])
 
     }
-    const handleRemovetoCart = (det) => {
-        const itemIndex = details.findIndex(obj => obj.id === det.id)
-        cart.splice(itemIndex, 1)
-        setCart([...cart])
-
-    }
+  
     const handleRemoveFromCart = (itemToRemove) => {
         // Implement logic to remove the item from the cart
         const updatedCart = cart.filter((item) => item.id !== itemToRemove.id);
@@ -171,7 +168,9 @@ function App() {
         <div>
 
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
-
+              
+            {/* adding the component files and passing the function  that will be get as props in their component function */}
+              
                 <Nav main={navContent} navItem={navItem} ></Nav>
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     {navItem.map((item, index) => (
